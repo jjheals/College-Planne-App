@@ -13,6 +13,7 @@
 		A40BCBB6298487D9000426BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40BCBB5298487D9000426BD /* Preview Assets.xcassets */; };
 		A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBBD298488C0000426BD /* SideMenuViewModel.swift */; };
 		A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBBF298488FE000426BD /* SideMenuView.swift */; };
+		A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC12984892C000426BD /* SideMenuOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A40BCBB5298487D9000426BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A40BCBBD298488C0000426BD /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		A40BCBBF298488FE000426BD /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		A40BCBC12984892C000426BD /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				A40BCBBD298488C0000426BD /* SideMenuViewModel.swift */,
 				A40BCBBF298488FE000426BD /* SideMenuView.swift */,
+				A40BCBC12984892C000426BD /* SideMenuOptionView.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
 				A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */,
+				A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */,
 				A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
