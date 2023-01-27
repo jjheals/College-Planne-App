@@ -17,6 +17,8 @@
 		A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC329848958000426BD /* SideMenuHeaderView.swift */; };
 		A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC6298489B2000426BD /* ToDoView.swift */; };
 		A40BCBC9298489CA000426BD /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC8298489CA000426BD /* SubjectsView.swift */; };
+		A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCA298489FA000426BD /* DashboardView.swift */; };
+		A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCC29848A0C000426BD /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		A40BCBC329848958000426BD /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		A40BCBC6298489B2000426BD /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		A40BCBC8298489CA000426BD /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
+		A40BCBCA298489FA000426BD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		A40BCBCC29848A0C000426BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				A40BCBC6298489B2000426BD /* ToDoView.swift */,
 				A40BCBC8298489CA000426BD /* SubjectsView.swift */,
+				A40BCBCA298489FA000426BD /* DashboardView.swift */,
+				A40BCBCC29848A0C000426BD /* CalendarView.swift */,
 			);
 			path = SubjectView;
 			sourceTree = "<group>";
@@ -171,10 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
 				A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */,
 				A40BCBC9298489CA000426BD /* SubjectsView.swift in Sources */,
+				A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */,
 				A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */,
 				A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */,
 				A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */,
