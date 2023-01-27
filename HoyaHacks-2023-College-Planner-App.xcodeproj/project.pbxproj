@@ -70,10 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				A40BCBCE29848A3C000426BD /* HTTPReq.swift */,
+				A40BCBB0298487D8000426BD /* ContentView.swift */,
+				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
 				A40BCBC529848981000426BD /* SubjectView */,
 				A40BCBBC29848869000426BD /* SideMenu */,
-				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
-				A40BCBB0298487D8000426BD /* ContentView.swift */,
 				A40BCBB2298487D9000426BD /* Assets.xcassets */,
 				A40BCBB4298487D9000426BD /* Preview Content */,
 			);

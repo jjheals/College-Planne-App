@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isShowing = false;
-    @StateObject var realmManager = RealmManager() // INCLUDE IN ALL VIEWS THAT INTERACT W/ DB
 
     var body: some View {
         NavigationView {
