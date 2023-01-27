@@ -11,6 +11,7 @@
 		A40BCBB1298487D8000426BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBB0298487D8000426BD /* ContentView.swift */; };
 		A40BCBB3298487D9000426BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40BCBB2298487D9000426BD /* Assets.xcassets */; };
 		A40BCBB6298487D9000426BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40BCBB5298487D9000426BD /* Preview Assets.xcassets */; };
+		A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBBD298488C0000426BD /* SideMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A40BCBB0298487D8000426BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A40BCBB2298487D9000426BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A40BCBB5298487D9000426BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A40BCBBD298488C0000426BD /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		A40BCBAD298487D8000426BD /* HoyaHacks-2023-College-Planner-App */ = {
 			isa = PBXGroup;
 			children = (
+				A40BCBBC29848869000426BD /* SideMenu */,
 				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
 				A40BCBB0298487D8000426BD /* ContentView.swift */,
 				A40BCBB2298487D9000426BD /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				A40BCBB5298487D9000426BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A40BCBBC29848869000426BD /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBBD298488C0000426BD /* SideMenuViewModel.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
+				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
 				A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
