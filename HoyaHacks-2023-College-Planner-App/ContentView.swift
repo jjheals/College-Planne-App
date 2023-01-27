@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  HoyaHacks-2023-College-Planner-App
 //
-//  Created by Justin Healey on 1/27/23.
+//  Created by Justin Healey on 1/27/23
 //
 
 import SwiftUI
