@@ -19,6 +19,7 @@
 		A40BCBC9298489CA000426BD /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC8298489CA000426BD /* SubjectsView.swift */; };
 		A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCA298489FA000426BD /* DashboardView.swift */; };
 		A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCC29848A0C000426BD /* CalendarView.swift */; };
+		A40BCBCF29848A3C000426BD /* HTTPReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCE29848A3C000426BD /* HTTPReq.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A40BCBC8298489CA000426BD /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		A40BCBCA298489FA000426BD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A40BCBCC29848A0C000426BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		A40BCBCE29848A3C000426BD /* HTTPReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReq.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		A40BCBAD298487D8000426BD /* HoyaHacks-2023-College-Planner-App */ = {
 			isa = PBXGroup;
 			children = (
+				A40BCBCE29848A3C000426BD /* HTTPReq.swift */,
 				A40BCBC529848981000426BD /* SubjectView */,
 				A40BCBBC29848869000426BD /* SideMenu */,
 				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
@@ -184,6 +187,7 @@
 				A40BCBC9298489CA000426BD /* SubjectsView.swift in Sources */,
 				A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */,
 				A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */,
+				A40BCBCF29848A3C000426BD /* HTTPReq.swift in Sources */,
 				A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */,
 				A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */,
 				A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */,
