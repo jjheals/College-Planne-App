@@ -2,7 +2,7 @@
 //  HTTPReq.swift
 //  College-Planner-App-SwiftUI
 //
-//  Created by Justin Healey on 1/27/23.
+//  Created by Justin Healey on 1/27/23
 //
 
 import Foundation
