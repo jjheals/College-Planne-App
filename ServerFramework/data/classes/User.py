@@ -9,10 +9,11 @@ import pickle
 from os import chdir, getcwd
 from os.path import isdir, isfile
 
-from data.classes.Assignment import Assignment 
+#from data.classes.Assignment import Assignment 
 from data.classes.Exam import Exam
 from data.classes.Subject import Subject
-from functions import *
+import data.classes.Assignment as a
+import functions
 
 class User: 
     
@@ -28,29 +29,21 @@ class User:
         self.exams = []
         
     # Save this user 
-    # Returns 0 on success, 1 on failure, 2 if user exists
-
     def save(self, newUser: bool = False):
-        pathName = f"../users/{self.username}.dat"
+        print(f"CWD: {getcwd()}")
+        pathName = f"./data/users/{self.username}.dat"
 
-        if isfile(pathName) and newUser:
-            print("User already exists")
-            return 2
         try: 
-            if not isfile(pathName):
-                newFile = open(pathName, "x")
-                newFile.close()
             with open(pathName, "wb") as f:
                 pickle.dump(self, f)
-                return 0
+                f.close()
         except Exception as e: 
             print("Error saving user.", e)
-            return 1
       
       
     # Add a new assignment to this user  
     # Returns 0 on success, 1 on failure
-    def addAssignment(self, newAssignment: Assignment):
+    def addAssignment(self, newAssignment: a.Assignment):
         self.assignments = self.assignments.append(newAssignment)
         return self.save()
     
@@ -68,7 +61,7 @@ class User:
             
     # Get all this user's assignments, sorted by due date
     def userSortAssignments(self):
-        return sortAssignments(self.assignments)
+        return functions.sortAssignments(self.assignments)
         
             
             

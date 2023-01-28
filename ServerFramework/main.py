@@ -1,19 +1,16 @@
 from urllib import request
-from flask import Flask, json, Response
+from flask import Flask, json, jsonify
 from flask import request
 from gevent.pywsgi import WSGIServer
 from flask_compress import Compress
 
-from os import chdir
+from os import chdir, getcwd
 from os.path import isfile
 
-from data.classes.User import User
-from data.classes.Assignment import Assignment
+import data.classes.User as u
 
-import pickle 
-from functions import *
+import pickle
 
-chdir('./data/classes')
 app = Flask(__name__)
 
 compress = Compress()
@@ -30,14 +27,15 @@ userDNEErrorMessage: dict[str:str] = {'Error': 'User does not exist.'}
 def createUser():
     
     # Get the data from the POST request
-    data, thisUser, pathName = getRequestInfo(request)
+    pathName = getRequestInfo(request)
 
     if checkUserExists(pathName):
         return {'Error': 'User already exists'}
     else: 
         # Create a new user
-        User(thisUser).save()
-        return {"Success":f"Created user {data['username']}"}
+        u.User(request.json["username"]).save()
+        return jsonify({"username": request.json["username"],
+                        "status":f"Success. Created user {request.json['username']}"})
 
 # -------------------------------------#
 # Get all the assignments for a particular user (sorted by date) 
@@ -46,18 +44,30 @@ def createUser():
 @app.route('/get-assignments', methods = ["POST"])
 def getAssignments():
     
-    data, thisUser, pathName = getRequestInfo(request)
+    thisUsername = request.json['username']
+    pathName = getRequestInfo(request)
 
     # Check if user actually exists
-    if not checkUserExists(pathName): return json.dumps({'Error': 'User does not exist'})
+    if not checkUserExists(pathName): 
+        print(f"User {thisUsername} does not exist.")
+        return jsonify({'status': 'Error: User does not exist'})
+
+    # IF request contains key "Subject"
+    #   -> Filter assignments to that subject
+    jsonRequest = request.json
+
+    try: 
+        subj = jsonRequest["Subject"]
+    except: 
+        subj = ""
 
     with open(pathName, "r") as f: 
-        user: User = pickle.load(f)
+        user: u.User = pickle.load(f)
         f.close()
     
-    theseAssignments: dict[str:dict[str: str]] = user.userSortAssignments()
+    theseAssignments: dict[str:dict[str: str]] = user.userSortAssignments(subj)
     
-    return json.dumps(theseAssignments)
+    return jsonify(theseAssignments)
 
 # -------------------------------------#
 # Add an assignment to a user 
@@ -66,29 +76,49 @@ def getAssignments():
 @app.route('/add-assignment', methods = ["POST"])
 def addAssignment(): 
     
-    data, thisUser, pathName = getRequestInfo(request)
+    pathName = getRequestInfo(request)
     
-    if not checkUserExists(): return json.dump(userDNEErrorMessage)
+    if not checkUserExists(): return jsonify(userDNEErrorMessage)
     
     #### DO MORE
 
 # -------------------------------------#
 @app.route('/verify', methods=["POST"])
 def verifyUser():
-    data, thisUser, pathName = getRequestInfo(request)
-    
+    thisUsername = request.json["username"]
+    pathName = getRequestInfo(request)
+    status: str
+
+    print(f"Verifying user {thisUsername}")
+    print(f"Path: {pathName}")
+
+    # Check if this user actually exists
+    # Return a status of "success" if successful, a status of "failure" if not 
     if checkUserExists(pathName): 
-        return Response(status=200)
+        status = "success"
+        print(f"Success. Found user {thisUsername}.")
     else: 
-        return Response(status=404)
-    
+        # Try to create a user
+        print(f"User {thisUsername} does not exist. Trying to create a new user ...")
+        newUser = u.User(thisUsername)
+        newUser.save(newUser = True)
+        print(f"Created new user {thisUsername}")
+        status = "success" # User created
+
+    response = {"username": thisUsername,
+                "status": "success"}
+    print(response)
+    return jsonify(response)
+        
 # ------------------------------ #
 def getRequestInfo(req: request):
     data = request.json
-    thisUser = data['username']
-    pathName = f'../data/users/{thisUser}.dat'
+    print(data)
+    thisUser = data["username"]
+    pathName = f'data/users/{thisUser}.dat'
+    print(f"Working directory: {getcwd()}")
     
-    return data, thisUser, pathName
+    return pathName
     
 
 def checkUserExists(pathName: str): 
