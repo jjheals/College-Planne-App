@@ -23,6 +23,15 @@ struct EditButtonDashboard: View {
                 VStack (alignment: .center, spacing: 15) {
                     TextField("Enter Subject", text: $enteredSubject)
                         .multilineTextAlignment(.center)
+                    Button(action: {
+                        
+            // space for json request
+                        
+                        }, label: {
+                            Text("Enter")
+                        }
+                    )
+
                 }
             }
         }
