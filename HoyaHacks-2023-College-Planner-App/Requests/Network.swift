@@ -49,7 +49,6 @@ class Network: ObservableObject {
                         let decodedJson = try JSONDecoder().decode(User.self, from: data)
                         // Store response in this instance's user and set verified to true 
                         self.thisUser = decodedJson
-                        self.thisUser?.verified = true
                         // Handle error
                     } catch let error {
                         print("Error decoding: ", error)
