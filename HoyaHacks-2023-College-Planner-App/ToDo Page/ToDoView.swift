@@ -22,31 +22,16 @@ struct ToDoView_UI: View {
 
 //local testing date for the To-Do List
 public class data {
-//    @Published var assignments: Dictionary = [
-//        "Problem Set":  ["Due Date": "Sun Jan 1, 2023"],
-//
-//        "Titration Set": ["Due Date": "Mon Jan 2, 2023"],
-//
-//        "DS Project": ["Due Date": "Tues Jan 3, 2023"]
-//    ]
-    
     @Published var assignments: OrderedDictionary = [
-        "Problem Set": "Sun Jan 1, 2023",
+        "Problem Set This is a long problem set": "Sun Jan 1",
 
-        "Titration Set": "Mon Jan 2, 2023",
+        "Titration Set": "Mon Jan 2",
 
-        "DS Project": "Tues Jan 3, 2023"
+        "DS Project": "Tues Jan 3"
     ]
 }
 
 struct displayAssignments: View {
-//    let assignments = [
-//        "Problem Set": "Sun Jan 1, 2023",
-//
-//        "Titration Set": "Mon Jan 2, 2023",
-//
-//        "DS Project": "Tues Jan 3, 2023"
-//    ]
 
     var body: some View {
         let keys = data().assignments.map {$0.key}
@@ -54,10 +39,15 @@ struct displayAssignments: View {
 
         return List {
             ForEach(keys.indices) {index in
-                HStack {
+                HStack (alignment: .center, spacing: 5){
                     Text(keys[index])
-                        
+                        .multilineTextAlignment(.leading)
+                    Spacer()
+//        //uncomment to create a re-usable checkbox for each of the assignments with there dueDates
+//                    CheckBoxViewHolder()
+//                    Spacer()
                     Text("\(values[index])")
+                        .multilineTextAlignment(.leading)
                 }
             }
         }

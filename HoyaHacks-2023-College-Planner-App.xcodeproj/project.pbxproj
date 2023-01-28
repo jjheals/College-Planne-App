@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		90C4F6A329849178002C49BD /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4F6A229849178002C49BD /* UsernameView.swift */; };
 		90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 90CB11002984D16C00D5FD90 /* OrderedCollections */; };
+		90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11082984DA8700D5FD90 /* CheckboxView.swift */; };
 		A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */; };
 		A40BCBB1298487D8000426BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBB0298487D8000426BD /* ContentView.swift */; };
 		A40BCBB3298487D9000426BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40BCBB2298487D9000426BD /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC12984892C000426BD /* SideMenuOptionView.swift */; };
 		A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC329848958000426BD /* SideMenuHeaderView.swift */; };
 		A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC6298489B2000426BD /* ToDoView.swift */; };
-		A40BCBC9298489CA000426BD /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC8298489CA000426BD /* SubjectsView.swift */; };
 		A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCA298489FA000426BD /* DashboardView.swift */; };
 		A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCC29848A0C000426BD /* CalendarView.swift */; };
 		A40BCBCF29848A3C000426BD /* HTTPReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCE29848A3C000426BD /* HTTPReq.swift */; };
@@ -26,7 +26,8 @@
 
 /* Begin PBXFileReference section */
 		90C4F6A229849178002C49BD /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
-		90CB10FE2984CD9F00D5FD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		90CB10FE2984CD9F00D5FD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90CB11082984DA8700D5FD90 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		A40BCBAB298487D8000426BD /* HoyaHacks-2023-College-Planner-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoyaHacks-2023-College-Planner-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyaHacks_2023_College_Planner_AppApp.swift; sourceTree = "<group>"; };
 		A40BCBB0298487D8000426BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		A40BCBC12984892C000426BD /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		A40BCBC329848958000426BD /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		A40BCBC6298489B2000426BD /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
-		A40BCBC8298489CA000426BD /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
 		A40BCBCA298489FA000426BD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A40BCBCC29848A0C000426BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		A40BCBCE29848A3C000426BD /* HTTPReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReq.swift; sourceTree = "<group>"; };
@@ -63,6 +63,56 @@
 			path = Username;
 			sourceTree = "<group>";
 		};
+		90CB11022984D90A00D5FD90 /* ToDo Page */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBC6298489B2000426BD /* ToDoView.swift */,
+				90CB11082984DA8700D5FD90 /* CheckboxView.swift */,
+			);
+			path = "ToDo Page";
+			sourceTree = "<group>";
+		};
+		90CB11032984D94400D5FD90 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBCE29848A3C000426BD /* HTTPReq.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		90CB11042984D96C00D5FD90 /* Dashboard Page */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBCA298489FA000426BD /* DashboardView.swift */,
+			);
+			path = "Dashboard Page";
+			sourceTree = "<group>";
+		};
+		90CB11052984D9AF00D5FD90 /* Calendar Page */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBCC29848A0C000426BD /* CalendarView.swift */,
+			);
+			path = "Calendar Page";
+			sourceTree = "<group>";
+		};
+		90CB11062984D9B900D5FD90 /* Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
+				A40BCBB0298487D8000426BD /* ContentView.swift */,
+			);
+			path = Functionality;
+			sourceTree = "<group>";
+		};
+		90CB11072984DA0400D5FD90 /* Data & Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A40BCBB2298487D9000426BD /* Assets.xcassets */,
+			);
+			path = "Data & Assets";
+			sourceTree = "<group>";
+		};
 		A40BCBA2298487D8000426BD = {
 			isa = PBXGroup;
 			children = (
@@ -83,13 +133,14 @@
 			isa = PBXGroup;
 			children = (
 				90CB10FE2984CD9F00D5FD90 /* Info.plist */,
-				A40BCBCE29848A3C000426BD /* HTTPReq.swift */,
-				A40BCBB0298487D8000426BD /* ContentView.swift */,
-				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
+				90CB11062984D9B900D5FD90 /* Functionality */,
+				90CB11032984D94400D5FD90 /* Requests */,
 				90C4F6A129849139002C49BD /* Username */,
-				A40BCBC529848981000426BD /* SubjectView */,
 				A40BCBBC29848869000426BD /* SideMenu */,
-				A40BCBB2298487D9000426BD /* Assets.xcassets */,
+				90CB11042984D96C00D5FD90 /* Dashboard Page */,
+				90CB11022984D90A00D5FD90 /* ToDo Page */,
+				90CB11052984D9AF00D5FD90 /* Calendar Page */,
+				90CB11072984DA0400D5FD90 /* Data & Assets */,
 				A40BCBB4298487D9000426BD /* Preview Content */,
 			);
 			path = "HoyaHacks-2023-College-Planner-App";
@@ -112,17 +163,6 @@
 				A40BCBC329848958000426BD /* SideMenuHeaderView.swift */,
 			);
 			path = SideMenu;
-			sourceTree = "<group>";
-		};
-		A40BCBC529848981000426BD /* SubjectView */ = {
-			isa = PBXGroup;
-			children = (
-				A40BCBC6298489B2000426BD /* ToDoView.swift */,
-				A40BCBC8298489CA000426BD /* SubjectsView.swift */,
-				A40BCBCA298489FA000426BD /* DashboardView.swift */,
-				A40BCBCC29848A0C000426BD /* CalendarView.swift */,
-			);
-			path = SubjectView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +244,9 @@
 				90C4F6A329849178002C49BD /* UsernameView.swift in Sources */,
 				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
+				90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
 				A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */,
-				A40BCBC9298489CA000426BD /* SubjectsView.swift in Sources */,
 				A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */,
 				A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */,
 				A40BCBCF29848A3C000426BD /* HTTPReq.swift in Sources */,
