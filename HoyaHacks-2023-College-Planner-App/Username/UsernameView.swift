@@ -13,6 +13,8 @@ public class username: ObservableObject {
 
 struct UsernameView: View {
     @State private var enteredUser: String = ""
+//var to dictate whether the keyboard is brought up or not
+    @FocusState private var isFocused: Bool
     
     var body: some View {
             ZStack {
@@ -25,6 +27,8 @@ struct UsernameView: View {
                 VStack (alignment: .center, spacing: 15) {
                     TextField("Enter a username", text: $enteredUser)
                         .multilineTextAlignment(.center)
+                    //sets boolean $isFocused to true when keyboard is pulled up
+                        .focused($isFocused)
                     Button(action: {
 //                        var jsonBody = JSONSerialization.data(withJSONObject: ["username":$enteredUser], options:[])
 //                        let req = HTTPReq(username: enteredUser, body: jsonBody)
@@ -34,6 +38,8 @@ struct UsernameView: View {
 //                        } else {
 //                            // Error
 //                            }
+                    //sets boolean to false, removing the keyboard
+                        isFocused = false
                         
                         }, label: {
                             Text("Enter")
