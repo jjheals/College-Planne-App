@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class username: ObservableObject {
+public class username: ObservableObject {
     @Published var user: String = ""
 }
 
@@ -16,10 +16,6 @@ struct UsernameView: View {
     @State var hasUser: Bool = (username().user.count != 0)
     
     var body: some View {
-
-        if hasUser {
-            HomeView()
-        } else {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(.blue)
@@ -32,9 +28,9 @@ struct UsernameView: View {
                         .multilineTextAlignment(.center)
                 }
             }
-        }
     }
 }
+
 
 struct UsernameView_Previews: PreviewProvider {
     static var previews: some View {

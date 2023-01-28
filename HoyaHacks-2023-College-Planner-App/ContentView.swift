@@ -17,6 +17,7 @@ struct ContentView: View {
                     SideMenuView(isShowing: $isShowing)
                 }
                 HomeView()
+                //all these attributes are for the animation
                     .cornerRadius(isShowing ? 20 : 10)
                     .offset(x: isShowing ? 300 : 0, y: isShowing ? 44 : 0)
                     .scaleEffect(isShowing ? 0.8 : 1)
@@ -43,10 +44,11 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color(.white)
-            
-            Text("Hello, World!")
-                .padding()
+            if (username().user.count == 0) {
+                UsernameView()
+            } else {
+                Text("Hello World")
+            }
         }
-        
     }
 }
