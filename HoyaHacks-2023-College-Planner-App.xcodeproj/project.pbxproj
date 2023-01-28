@@ -12,8 +12,6 @@
 		90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11082984DA8700D5FD90 /* CheckboxView.swift */; };
 		90CB110B2984DEA100D5FD90 /* EditButtonToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */; };
 		90CB110D2984DFA000D5FD90 /* EditButtonAssignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110C2984DFA000D5FD90 /* EditButtonAssignments.swift */; };
-		90CB110F2984E2F500D5FD90 /* JSON_HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110E2984E2F500D5FD90 /* JSON_HTTPRequest.swift */; };
-		90CB11112984E35000D5FD90 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11102984E35000D5FD90 /* HTTPResponse.swift */; };
 		90CB11132984E37400D5FD90 /* JSONBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11122984E37400D5FD90 /* JSONBody.swift */; };
 		90CB11152984F4C200D5FD90 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11142984F4C200D5FD90 /* Network.swift */; };
 		90CB11172984F4E900D5FD90 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11162984F4E900D5FD90 /* User.swift */; };
@@ -36,8 +34,6 @@
 		90CB11082984DA8700D5FD90 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonToDo.swift; sourceTree = "<group>"; };
 		90CB110C2984DFA000D5FD90 /* EditButtonAssignments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonAssignments.swift; sourceTree = "<group>"; };
-		90CB110E2984E2F500D5FD90 /* JSON_HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_HTTPRequest.swift; sourceTree = "<group>"; };
-		90CB11102984E35000D5FD90 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		90CB11122984E37400D5FD90 /* JSONBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBody.swift; sourceTree = "<group>"; };
 		90CB11142984F4C200D5FD90 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		90CB11162984F4E900D5FD90 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -88,8 +84,6 @@
 		90CB11032984D94400D5FD90 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				90CB110E2984E2F500D5FD90 /* JSON_HTTPRequest.swift */,
-				90CB11102984E35000D5FD90 /* HTTPResponse.swift */,
 				90CB11122984E37400D5FD90 /* JSONBody.swift */,
 				90CB11142984F4C200D5FD90 /* Network.swift */,
 				90CB11162984F4E900D5FD90 /* User.swift */,
@@ -265,13 +259,11 @@
 				90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */,
 				90CB110D2984DFA000D5FD90 /* EditButtonAssignments.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
-				90CB110F2984E2F500D5FD90 /* JSON_HTTPRequest.swift in Sources */,
 				A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */,
 				A40BCBCB298489FA000426BD /* AssignmentsView.swift in Sources */,
 				A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */,
 				90CB11152984F4C200D5FD90 /* Network.swift in Sources */,
 				90CB110B2984DEA100D5FD90 /* EditButtonToDo.swift in Sources */,
-				90CB11112984E35000D5FD90 /* HTTPResponse.swift in Sources */,
 				A40BCBC7298489B2000426BD /* Notes.swift in Sources */,
 				90CB11172984F4E900D5FD90 /* User.swift in Sources */,
 				90CB11132984E37400D5FD90 /* JSONBody.swift in Sources */,
@@ -421,7 +413,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -451,7 +443,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

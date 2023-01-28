@@ -9,7 +9,7 @@ import Foundation
 
 class Network: ObservableObject {
     @Published var thisUser: User?
-
+ 
     init() {}
     
     func verifyUser(username: String) {

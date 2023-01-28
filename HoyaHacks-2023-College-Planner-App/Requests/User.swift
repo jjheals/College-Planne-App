@@ -4,7 +4,7 @@
 //
 //  Created by Justin Healey on 1/28/23.
 //
- 
+  
 import Foundation
 
 struct User: Decodable {
