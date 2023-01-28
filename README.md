@@ -1,0 +1,1 @@
+This directory contains all the files for the server's framework, including for Twilio SMS and the web API endpoints. For testing under the time constraints, security was considered but hard to implement.
