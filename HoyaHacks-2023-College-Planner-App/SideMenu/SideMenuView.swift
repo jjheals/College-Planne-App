@@ -27,7 +27,7 @@ struct SideMenuView: View {
                 
                 ForEach(SideMenuViewModel.allCases, id: \.self) { option in
                     if(option == .dashboard) {
-                        NavigationLink(destination: DashboardView_UI(), label: { SideMenuOptionView(viewModel: option) } )
+                        NavigationLink(destination: DashboardViewTest(), label: { SideMenuOptionView(viewModel: option) } )
                     }
                     else if(option == .calendar) {
                         NavigationLink(destination: CalendarView_UI(), label: { SideMenuOptionView(viewModel: option) } )

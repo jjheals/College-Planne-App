@@ -46,7 +46,7 @@ struct EditButtonDashboard: View {
                     Image(systemName: "plus.circle.fill")
                         .foregroundColor(.blue)
                         .font(.system(size:48))
-                        .frame(maxWidth: .infinity, minHeight: 0, alignment: .trailing)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                         .padding()
                 }
             }

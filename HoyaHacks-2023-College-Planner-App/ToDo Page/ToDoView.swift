@@ -15,8 +15,10 @@ struct ToDoView_UI: View {
                 .font(.headline).bold()
             Spacer()
         }
-        displayAssignments()
-        EditButtonToDo()
+        ZStack {
+            displayAssignments()
+            EditButtonToDo()
+        }
     }
 }
 
