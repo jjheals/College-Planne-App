@@ -16,17 +16,10 @@ struct EditButtonAssignments: View {
     var body: some View {
         if ShowTextField {
             ZStack {
-//                RoundedRectangle(cornerRadius: 20)
-//                    .foregroundColor(.blue)
-//                    .frame(width: 200, height: 100)
-//                RoundedRectangle(cornerRadius: 20)
-//                    .foregroundColor(.white)
-//                    .frame(width: 180, height: 80)
                 VStack (alignment: .center, spacing: 15) {
                     TextField("Enter Subject", text: $enteredSubject)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(.roundedBorder)
-                        .accentColor(.black)
                     TextField("Enter Assignment", text: $enteredAssignment)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(.roundedBorder)
@@ -38,7 +31,12 @@ struct EditButtonAssignments: View {
             // space for json request
                         
                         }, label: {
+                            Capsule().overlay (
                             Text("Enter")
+                                .foregroundColor(.black)
+                                .padding()
+                            ).frame (width: 100, height: 40)
+                                .foregroundColor(.white)
                         }
                     )
 

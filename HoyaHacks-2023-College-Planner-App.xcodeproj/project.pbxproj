@@ -413,7 +413,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "HoyaHacks2023.HoyaHacks-2023-College-Planner-App-1-";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,7 +443,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "HoyaHacks2023.HoyaHacks-2023-College-Planner-App-1-";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

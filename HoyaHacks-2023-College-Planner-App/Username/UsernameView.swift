@@ -27,6 +27,9 @@ struct UsernameView: View {
                 VStack (alignment: .center, spacing: 15) {
                     TextField("Enter a username", text: $enteredUser)
                         .multilineTextAlignment(.center)
+                        .textFieldStyle(.roundedBorder)
+
+
                     //sets boolean $isFocused to true when keyboard is pulled up
                         .focused($isFocused)
                     
@@ -46,10 +49,14 @@ struct UsernameView: View {
                             }
                         })
                     }, label: {
-                            Text("Enter")
+                        Capsule().overlay (
+                        Text("Enter")
+                            .foregroundColor(.black)
+                            .padding()
+                        ).frame (width: 100, height: 40)
                         }
                     )
-                }
+                }.modifier(CustomViewModifier(roundedCornes: 6, startColor: .blue, endColor: .purple, textColor: .white))
             }
     }
 }
