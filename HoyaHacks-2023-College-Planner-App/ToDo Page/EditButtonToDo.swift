@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditButtonToDo: View {
     @State private var ShowTextField = false
+    @State private var enteredSubject: String = ""
     @State private var enteredAssignment: String = ""
     @State private var enteredDueDate: String = ""
 
@@ -18,15 +19,25 @@ struct EditButtonToDo: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(.blue)
-                    .frame(width: 200, height: 100)
+                    .frame(width: 250, height: 170)
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(.white)
-                    .frame(width: 180, height: 80)
+                    .frame(width: 220, height: 150)
                 VStack (alignment: .center, spacing: 15) {
+                    TextField("Enter Subject", text: $enteredSubject)
+                        .multilineTextAlignment(.center)
                     TextField("Enter Assignment", text: $enteredAssignment)
                         .multilineTextAlignment(.center)
                     TextField("Enter Due Date", text: $enteredDueDate)
                         .multilineTextAlignment(.center)
+                    Button(action: {
+                        
+            // space for json request
+                        
+                        }, label: {
+                            Text("Enter")
+                        }
+                    )
                 }
             }
         }

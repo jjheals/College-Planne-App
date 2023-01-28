@@ -27,7 +27,11 @@ public class data {
 
         "Titration Set": "Mon Jan 2",
 
-        "DS Project": "Tues Jan 3"
+        "DS Project": "Tues Jan 3",
+        
+        "DB Project": "Wed Jan 4",
+        
+        "Ideas Paper": "Thurs Jan 5",
     ]
 }
 

@@ -26,7 +26,6 @@
 		A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC6298489B2000426BD /* ToDoView.swift */; };
 		A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCA298489FA000426BD /* DashboardView.swift */; };
 		A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCC29848A0C000426BD /* CalendarView.swift */; };
-		A40BCBCF29848A3C000426BD /* HTTPReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCE29848A3C000426BD /* HTTPReq.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +49,6 @@
 		A40BCBC6298489B2000426BD /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		A40BCBCA298489FA000426BD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A40BCBCC29848A0C000426BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		A40BCBCE29848A3C000426BD /* HTTPReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPReq.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 		90CB11032984D94400D5FD90 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				A40BCBCE29848A3C000426BD /* HTTPReq.swift */,
 				90CB110E2984E2F500D5FD90 /* JSON_HTTPRequest.swift */,
 				90CB11102984E35000D5FD90 /* HTTPResponse.swift */,
 				90CB11122984E37400D5FD90 /* JSONBody.swift */,
@@ -267,7 +264,6 @@
 				A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */,
 				A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */,
 				90CB110B2984DEA100D5FD90 /* EditButtonToDo.swift in Sources */,
-				A40BCBCF29848A3C000426BD /* HTTPReq.swift in Sources */,
 				90CB11112984E35000D5FD90 /* HTTPResponse.swift in Sources */,
 				A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */,
 				90CB11132984E37400D5FD90 /* JSONBody.swift in Sources */,
