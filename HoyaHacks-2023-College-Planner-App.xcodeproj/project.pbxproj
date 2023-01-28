@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9073A0DC2985234D009E560C /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073A0DB2985234D009E560C /* CustomViewModifier.swift */; };
 		90C4F6A329849178002C49BD /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4F6A229849178002C49BD /* UsernameView.swift */; };
 		90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 90CB11002984D16C00D5FD90 /* OrderedCollections */; };
 		90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11082984DA8700D5FD90 /* CheckboxView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9073A0DB2985234D009E560C /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
 		90C4F6A229849178002C49BD /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 		90CB10FE2984CD9F00D5FD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CB11082984DA8700D5FD90 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
@@ -117,12 +119,13 @@
 			path = Functionality;
 			sourceTree = "<group>";
 		};
-		90CB11072984DA0400D5FD90 /* Data & Assets */ = {
+		90CB11072984DA0400D5FD90 /* Rand Structs & Assets */ = {
 			isa = PBXGroup;
 			children = (
 				A40BCBB2298487D9000426BD /* Assets.xcassets */,
+				9073A0DB2985234D009E560C /* CustomViewModifier.swift */,
 			);
-			path = "Data & Assets";
+			path = "Rand Structs & Assets";
 			sourceTree = "<group>";
 		};
 		A40BCBA2298487D8000426BD = {
@@ -152,7 +155,7 @@
 				90CB11042984D96C00D5FD90 /* Assignments Page */,
 				90CB11022984D90A00D5FD90 /* Notes Page */,
 				90CB11052984D9AF00D5FD90 /* Calendar Page */,
-				90CB11072984DA0400D5FD90 /* Data & Assets */,
+				90CB11072984DA0400D5FD90 /* Rand Structs & Assets */,
 				A40BCBB4298487D9000426BD /* Preview Content */,
 			);
 			path = "HoyaHacks-2023-College-Planner-App";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9073A0DC2985234D009E560C /* CustomViewModifier.swift in Sources */,
 				90C4F6A329849178002C49BD /* UsernameView.swift in Sources */,
 				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
@@ -413,7 +417,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
+				PRODUCT_BUNDLE_IDENTIFIER = "HoyaHacks2023.HoyaHacks-2023-College-Planner-App-1-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,7 +447,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
+				PRODUCT_BUNDLE_IDENTIFIER = "HoyaHacks2023.HoyaHacks-2023-College-Planner-App-1-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
