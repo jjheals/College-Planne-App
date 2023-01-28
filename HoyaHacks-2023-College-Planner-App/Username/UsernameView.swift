@@ -30,14 +30,43 @@ struct UsernameView: View {
                     //sets boolean $isFocused to true when keyboard is pulled up
                         .focused($isFocused)
                     Button(action: {
-//                        var jsonBody = JSONSerialization.data(withJSONObject: ["username":$enteredUser], options:[])
-//                        let req = HTTPReq(username: enteredUser, body: jsonBody)
-//
-//                        if (req.sendReq("/create-user")) {
-//                            HomeView()
-//                        } else {
-//                            // Error
-//                            }
+                        // Create new network
+                        var thisNetwork: Network = Network()
+                        // Verify this user
+                        thisNetwork.verifyUser(username: enteredUser)
+                        var verified: Bool = thisNetwork.thisUser?.verified != nil // If thisNetwork.thisUser is verified
+                        
+                        /* DO SOMETHING */
+                        if verified {
+                            // User verified //
+                            // Add MFA? //
+                            
+                        } else {
+                            // User not verified, create a new user
+                            var newUser: User {
+                                do {
+                                    // Create a new user
+                                    try thisNetwork.createUser(username: enteredUser)
+                                } catch {
+                                    // If an error, make thisNetwork.thisUser an unverified user
+                                    let notVerifiedUser = User(username: "", verified: false)
+                                    thisNetwork.thisUser = notVerifiedUser
+                                }
+                                // Return thisNetwork.thisUser
+                                // Call "newUser.verified"
+                                return thisNetwork.thisUser!
+                            }
+                            // Check if newUser executed without issues
+                            /* DO SOMETHING */
+                            if newUser.verified! {
+                                // New user verified //
+                            
+                            /* DO SOMETHING */
+                            } else {
+                                // Error creating a new user
+
+                            }
+                        }
                     //sets boolean to false, removing the keyboard
                         isFocused = false
                         

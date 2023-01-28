@@ -9,5 +9,5 @@ import Foundation
 
 struct User: Decodable {
     var username: String
-    var verified: Bool
+    var verified: Bool? // Optional so JSON response does not need to include
 }
