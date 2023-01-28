@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90C4F6A329849178002C49BD /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4F6A229849178002C49BD /* UsernameView.swift */; };
 		A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */; };
 		A40BCBB1298487D8000426BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBB0298487D8000426BD /* ContentView.swift */; };
 		A40BCBB3298487D9000426BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40BCBB2298487D9000426BD /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90C4F6A229849178002C49BD /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 		A40BCBAB298487D8000426BD /* HoyaHacks-2023-College-Planner-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoyaHacks-2023-College-Planner-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyaHacks_2023_College_Planner_AppApp.swift; sourceTree = "<group>"; };
 		A40BCBB0298487D8000426BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90C4F6A129849139002C49BD /* Username */ = {
+			isa = PBXGroup;
+			children = (
+				90C4F6A229849178002C49BD /* UsernameView.swift */,
+			);
+			path = Username;
+			sourceTree = "<group>";
+		};
 		A40BCBA2298487D8000426BD = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 				A40BCBCE29848A3C000426BD /* HTTPReq.swift */,
 				A40BCBB0298487D8000426BD /* ContentView.swift */,
 				A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */,
+				90C4F6A129849139002C49BD /* Username */,
 				A40BCBC529848981000426BD /* SubjectView */,
 				A40BCBBC29848869000426BD /* SideMenu */,
 				A40BCBB2298487D9000426BD /* Assets.xcassets */,
@@ -180,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C4F6A329849178002C49BD /* UsernameView.swift in Sources */,
 				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
@@ -319,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HoyaHacks-2023-College-Planner-App/Preview Content\"";
-				DEVELOPMENT_TEAM = 5M36XA73A7;
+				DEVELOPMENT_TEAM = 2TXDKNW3R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -348,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HoyaHacks-2023-College-Planner-App/Preview Content\"";
-				DEVELOPMENT_TEAM = 5M36XA73A7;
+				DEVELOPMENT_TEAM = 2TXDKNW3R6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

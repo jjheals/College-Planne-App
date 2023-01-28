@@ -19,7 +19,6 @@ struct ToDoView_UI: View {
     }
 }
 
-//struct
 struct EditButtonToDo: View {
     @State private var ShowTextField = false
     @State private var enteredAssignment: String = ""
