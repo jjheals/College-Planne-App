@@ -7,9 +7,11 @@
 
 import Foundation
 
+import Foundation
+
 // Use in JSON_HTTPRequest
 /* Usage:
-    
+     
     dataToSend = JSONBody()
     dataToSend.username = "username"
     dataToSend.assignmentName = "assignmentName"
@@ -25,13 +27,13 @@ struct JSONBody: Codable {
     
     var jsonBody: Data? {
         let encoder = JSONEncoder()
-        var dict: [String: String?] = [
+        let dict: [String: String?] = [
             "username": self.username,
             "assignment-name": self.assignmentName,
             "subject-name": self.subjectName,
             "dueDate": self.dueDate
         ]
-        var encodedData = try? encoder.encode(dict)
+        let encodedData = try? encoder.encode(dict)
         return encodedData
     }
 }
