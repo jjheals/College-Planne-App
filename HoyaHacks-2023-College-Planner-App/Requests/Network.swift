@@ -13,6 +13,7 @@ class Network: ObservableObject {
     init() {}
     
     func verifyUser(username: String) {
+        print("VERIFY USER CALL \(username)")
         // Set the URL
         guard let url = URL(string: "http://139.144.239.83/verify") else { fatalError("Missing URL") }
         // Create Request
@@ -21,6 +22,8 @@ class Network: ObservableObject {
         urlRequest.httpMethod = "POST"  // Set request type to POST
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-type") // Set the content-type header
         let parameters = ["username": username] // Parameters used for JSON body
+        print("PARAMETERS \(parameters)")
+        urlRequest.timeoutInterval = 20
         do {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) // Set the request body
         } catch let error {
@@ -40,7 +43,7 @@ class Network: ObservableObject {
             if response.statusCode == 200 {
                 guard let data = data else { return }
                 // Start decoding asyncronously
-                DispatchQueue.main.async {
+                DispatchQueue.main.sync {
                     do {
                         // Decoded json from response
                         let decodedJson = try JSONDecoder().decode(User.self, from: data)
@@ -83,8 +86,8 @@ class Network: ObservableObject {
             // Get server response
             //guard let response = response as? HTTPURLResponse else { return }
             guard let data = data else { return }
-            // Start decoding asyncronously
-            DispatchQueue.main.async {
+            // Start decoding syncronously
+            DispatchQueue.main.sync {
                 do {
                     // Decoded json from response
                     let decodedJson = try JSONDecoder().decode(User.self, from: data)

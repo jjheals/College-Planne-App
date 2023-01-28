@@ -7,15 +7,13 @@
 
 import Foundation
 
-
-final class Message: Codable {
-    var id: Int?
-    var message: String
-    
-    init(message: String) {
-        self.message = message
-    }
+// User data structure
+final class User: Codable {
+    var username: String
+    var verified: Bool? // Optional so JSON response does not need to include
 }
+
+// Errors
 enum APIError: Error {
     case responseProblem
     case decodingProblem
@@ -27,30 +25,37 @@ struct APIRequest {
     let resourceURL: URL
     
     init(endpoint: String) {
-        let resourceString = "http://SERVER_IP/\(endpoint)"
+        let resourceString = "http://139.144.239.83:8080/\(endpoint)"
         guard let resourceURL = URL(string: resourceString) else { fatalError() }
         self.resourceURL = resourceURL
     }
     
-    func verifyUser(_ username:String, completion: @escaping(Result<Message, APIError>) -> Void) {
+    func verifyUser(_ username: String, completion: @escaping(Result<String, APIError>) -> Void) {
         do {
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
-            urlRequest.httpBody = try JSONEncoder().encode(messageToSave)
+            
+            var content: [String:String] = ["username": username]
+            
+            urlRequest.httpBody = try JSONEncoder().encode(content)
             
             let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let
-                        jsonData = data else {
+                    jsonData = data else {
                     completion(.failure(.responseProblem))
                     return
-                }
+                    }
                 do {
-                    let messageData = try JSONDecoder().decode(Message.self, from: jsonData)
+                    let content = try JSONDecoder().decode(User.self, from: jsonData)
                     completion(.failure(.decodingProblem))
+                } catch {
+                    completion(.failure(.encodingProblem))
+
                 }
             }
             dataTask.resume()
+            
         } catch {
             completion(.failure(.encodingProblem))
         }

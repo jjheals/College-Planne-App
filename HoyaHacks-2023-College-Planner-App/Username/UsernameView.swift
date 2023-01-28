@@ -13,8 +13,8 @@ public class username: ObservableObject {
 
 struct UsernameView: View {
     @State private var enteredUser: String = ""
-//var to dictate whether the keyboard is brought up or not
-    @FocusState private var isFocused: Bool
+    @FocusState private var isFocused: Bool         //var to dictate whether the keyboard is brought up or not
+    @State private var running: Int = 2                // 1 == verified ; 0 == not verified
     
     var body: some View {
             ZStack {
@@ -29,48 +29,23 @@ struct UsernameView: View {
                         .multilineTextAlignment(.center)
                     //sets boolean $isFocused to true when keyboard is pulled up
                         .focused($isFocused)
+                    
                     Button(action: {
+                        print("ENTERED USERNAME: \(enteredUser)")
                         // Create new network
-                        var thisNetwork: Network = Network()
-                        // Verify this user
-                        thisNetwork.verifyUser(username: enteredUser)
-                        var verified: Bool = thisNetwork.thisUser?.verified != nil // If thisNetwork.thisUser is verified
-                        
-                        /* DO SOMETHING */
-                        if verified {
-                            // User verified //
-                            // Add MFA? //
-                            
-                        } else {
-                            // User not verified, create a new user
-                            var newUser: User {
-                                do {
-                                    // Create a new user
-                                    try thisNetwork.createUser(username: enteredUser)
-                                } catch {
-                                    // If an error, make thisNetwork.thisUser an unverified user
-                                    let notVerifiedUser = User(username: "", verified: false)
-                                    thisNetwork.thisUser = notVerifiedUser
-                                }
-                                // Return thisNetwork.thisUser
-                                // Call "newUser.verified"
-                                return thisNetwork.thisUser!
+                        let postReq = APIRequest(endpoint: "/verify")
+                        var httpResponse: String = ""
+                        postReq.verifyUser(enteredUser, completion: { result in
+                            switch result {
+                            case .success(let message):
+                                print("Success")
+                                httpResponse = message
+                                print(httpResponse)
+                            case .failure(let error):
+                                print("Error", error)
                             }
-                            // Check if newUser executed without issues
-                            /* DO SOMETHING */
-                            if newUser.verified! {
-                                // New user verified //
-                            
-                            /* DO SOMETHING */
-                            } else {
-                                // Error creating a new user
-
-                            }
-                        }
-                    //sets boolean to false, removing the keyboard
-                        isFocused = false
-                        
-                        }, label: {
+                        })
+                    }, label: {
                             Text("Enter")
                         }
                     )
@@ -83,5 +58,18 @@ struct UsernameView: View {
 struct UsernameView_Previews: PreviewProvider {
     static var previews: some View {
         UsernameView()
+    }
+}
+
+struct newView: View {
+    
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    var body: some View {
+        Text("Hello, \(name)")
     }
 }
