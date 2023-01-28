@@ -10,23 +10,23 @@ import SwiftUI
 
 //needs to be changed to data model
 enum SideMenuViewModel: Int, CaseIterable {
-    case dashboard
+    case assignments
     case calendar
-    case toDoList
+    case notes
     
     var title: String {
         switch self {
-        case .dashboard: return "Dashboard"
+        case .assignments: return "Assignments"
         case .calendar: return "Calendar"
-        case .toDoList: return "To-Do List"
+        case .notes: return "Notes"
         }
     }
     
     var imageName: String {
         switch self {
-        case .dashboard: return "house"
+        case .assignments: return "book"
         case .calendar: return "calendar.circle"
-        case .toDoList: return "list.clipboard"
+        case .notes: return "list.clipboard"
         }
     }
     

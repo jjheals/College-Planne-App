@@ -11,7 +11,7 @@
 		90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 90CB11002984D16C00D5FD90 /* OrderedCollections */; };
 		90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11082984DA8700D5FD90 /* CheckboxView.swift */; };
 		90CB110B2984DEA100D5FD90 /* EditButtonToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */; };
-		90CB110D2984DFA000D5FD90 /* EditButtonDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110C2984DFA000D5FD90 /* EditButtonDashboard.swift */; };
+		90CB110D2984DFA000D5FD90 /* EditButtonAssignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110C2984DFA000D5FD90 /* EditButtonAssignments.swift */; };
 		90CB110F2984E2F500D5FD90 /* JSON_HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110E2984E2F500D5FD90 /* JSON_HTTPRequest.swift */; };
 		90CB11112984E35000D5FD90 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11102984E35000D5FD90 /* HTTPResponse.swift */; };
 		90CB11132984E37400D5FD90 /* JSONBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11122984E37400D5FD90 /* JSONBody.swift */; };
@@ -25,8 +25,8 @@
 		A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBBF298488FE000426BD /* SideMenuView.swift */; };
 		A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC12984892C000426BD /* SideMenuOptionView.swift */; };
 		A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC329848958000426BD /* SideMenuHeaderView.swift */; };
-		A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC6298489B2000426BD /* ToDoView.swift */; };
-		A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCA298489FA000426BD /* DashboardView.swift */; };
+		A40BCBC7298489B2000426BD /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBC6298489B2000426BD /* Notes.swift */; };
+		A40BCBCB298489FA000426BD /* AssignmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCA298489FA000426BD /* AssignmentsView.swift */; };
 		A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBCC29848A0C000426BD /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		90CB10FE2984CD9F00D5FD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CB11082984DA8700D5FD90 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonToDo.swift; sourceTree = "<group>"; };
-		90CB110C2984DFA000D5FD90 /* EditButtonDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonDashboard.swift; sourceTree = "<group>"; };
+		90CB110C2984DFA000D5FD90 /* EditButtonAssignments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonAssignments.swift; sourceTree = "<group>"; };
 		90CB110E2984E2F500D5FD90 /* JSON_HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_HTTPRequest.swift; sourceTree = "<group>"; };
 		90CB11102984E35000D5FD90 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		90CB11122984E37400D5FD90 /* JSONBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONBody.swift; sourceTree = "<group>"; };
@@ -50,8 +50,8 @@
 		A40BCBBF298488FE000426BD /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		A40BCBC12984892C000426BD /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		A40BCBC329848958000426BD /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
-		A40BCBC6298489B2000426BD /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
-		A40BCBCA298489FA000426BD /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		A40BCBC6298489B2000426BD /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		A40BCBCA298489FA000426BD /* AssignmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsView.swift; sourceTree = "<group>"; };
 		A40BCBCC29848A0C000426BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,14 +75,14 @@
 			path = Username;
 			sourceTree = "<group>";
 		};
-		90CB11022984D90A00D5FD90 /* ToDo Page */ = {
+		90CB11022984D90A00D5FD90 /* Notes Page */ = {
 			isa = PBXGroup;
 			children = (
-				A40BCBC6298489B2000426BD /* ToDoView.swift */,
+				A40BCBC6298489B2000426BD /* Notes.swift */,
 				90CB11082984DA8700D5FD90 /* CheckboxView.swift */,
 				90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */,
 			);
-			path = "ToDo Page";
+			path = "Notes Page";
 			sourceTree = "<group>";
 		};
 		90CB11032984D94400D5FD90 /* Requests */ = {
@@ -97,13 +97,13 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
-		90CB11042984D96C00D5FD90 /* Dashboard Page */ = {
+		90CB11042984D96C00D5FD90 /* Assignments Page */ = {
 			isa = PBXGroup;
 			children = (
-				A40BCBCA298489FA000426BD /* DashboardView.swift */,
-				90CB110C2984DFA000D5FD90 /* EditButtonDashboard.swift */,
+				A40BCBCA298489FA000426BD /* AssignmentsView.swift */,
+				90CB110C2984DFA000D5FD90 /* EditButtonAssignments.swift */,
 			);
-			path = "Dashboard Page";
+			path = "Assignments Page";
 			sourceTree = "<group>";
 		};
 		90CB11052984D9AF00D5FD90 /* Calendar Page */ = {
@@ -155,8 +155,8 @@
 				90CB11032984D94400D5FD90 /* Requests */,
 				90C4F6A129849139002C49BD /* Username */,
 				A40BCBBC29848869000426BD /* SideMenu */,
-				90CB11042984D96C00D5FD90 /* Dashboard Page */,
-				90CB11022984D90A00D5FD90 /* ToDo Page */,
+				90CB11042984D96C00D5FD90 /* Assignments Page */,
+				90CB11022984D90A00D5FD90 /* Notes Page */,
 				90CB11052984D9AF00D5FD90 /* Calendar Page */,
 				90CB11072984DA0400D5FD90 /* Data & Assets */,
 				A40BCBB4298487D9000426BD /* Preview Content */,
@@ -263,16 +263,16 @@
 				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
 				90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */,
-				90CB110D2984DFA000D5FD90 /* EditButtonDashboard.swift in Sources */,
+				90CB110D2984DFA000D5FD90 /* EditButtonAssignments.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
 				90CB110F2984E2F500D5FD90 /* JSON_HTTPRequest.swift in Sources */,
 				A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */,
-				A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */,
+				A40BCBCB298489FA000426BD /* AssignmentsView.swift in Sources */,
 				A40BCBC429848958000426BD /* SideMenuHeaderView.swift in Sources */,
 				90CB11152984F4C200D5FD90 /* Network.swift in Sources */,
 				90CB110B2984DEA100D5FD90 /* EditButtonToDo.swift in Sources */,
 				90CB11112984E35000D5FD90 /* HTTPResponse.swift in Sources */,
-				A40BCBC7298489B2000426BD /* ToDoView.swift in Sources */,
+				A40BCBC7298489B2000426BD /* Notes.swift in Sources */,
 				90CB11172984F4E900D5FD90 /* User.swift in Sources */,
 				90CB11132984E37400D5FD90 /* JSONBody.swift in Sources */,
 				A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */,

@@ -26,13 +26,13 @@ struct SideMenuView: View {
                 }
                 
                 ForEach(SideMenuViewModel.allCases, id: \.self) { option in
-                    if(option == .dashboard) {
-                        NavigationLink(destination: DashboardViewTest(), label: { SideMenuOptionView(viewModel: option) } )
+                    if(option == .assignments) {
+                        NavigationLink(destination: AssignmentsView(), label: { SideMenuOptionView(viewModel: option) } )
                     }
                     else if(option == .calendar) {
                         NavigationLink(destination: CalendarView_UI(), label: { SideMenuOptionView(viewModel: option) } )
                     }
-                    else { NavigationLink (destination: ToDoView_UI(), label: { SideMenuOptionView(viewModel: option) } )
+                    else { NavigationLink (destination: Notes(), label: { SideMenuOptionView(viewModel: option) } )
                     }
                 }
                     Spacer()

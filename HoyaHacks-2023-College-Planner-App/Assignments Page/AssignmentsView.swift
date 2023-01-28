@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-//var subjects = ["Math", "History", "Science", "Biology", "Chemistry", "Physics", "Calculus"]
-struct DashboardViewTest: View {
-//    struct dueDate: Hashable, Identifiable {
-//        let name: String
-//        let id = UUID()
-//    }
+struct AssignmentsView: View {
     
     struct Assignment: Hashable, Identifiable {
         let name: String
@@ -65,33 +60,15 @@ struct DashboardViewTest: View {
                         }
                     }
                 }
-                EditButtonDashboard()
+                EditButtonAssignments()
             }
         }
     }
 }
 
 
-
-//struct DashboardView_UI: View {
-//
-//    var body: some View {
-//        ScrollView {
-//            ForEach (subjects, id: \.self) {subject in
-//                ZStack {
-//                    RoundedRectangle(cornerRadius: 20)
-//                        .foregroundColor(.blue)
-//                        .frame(width: 350, height: 150)
-//                    Text(subject)
-//                }
-//            }
-//        }
-//        EditButtonDashboard()
-//    }
-//}
-
 struct DashboardView_UI_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardViewTest()
+        AssignmentsView()
     }
 }

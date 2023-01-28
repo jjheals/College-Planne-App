@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditButtonDashboard: View {
+struct EditButtonAssignments: View {
     @State private var ShowTextField = false
     @State private var enteredSubject: String = ""
     
@@ -54,8 +54,8 @@ struct EditButtonDashboard: View {
     }
 }
 
-struct EditButtonDashboard_Previews: PreviewProvider {
+struct EditButtonAssignments_Previews: PreviewProvider {
     static var previews: some View {
-        EditButtonDashboard()
+        EditButtonAssignments()
     }
 }
