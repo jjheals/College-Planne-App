@@ -11,6 +11,7 @@
 		90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 90CB11002984D16C00D5FD90 /* OrderedCollections */; };
 		90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11082984DA8700D5FD90 /* CheckboxView.swift */; };
 		90CB110B2984DEA100D5FD90 /* EditButtonToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */; };
+		90CB110D2984DFA000D5FD90 /* EditButtonDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB110C2984DFA000D5FD90 /* EditButtonDashboard.swift */; };
 		A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */; };
 		A40BCBB1298487D8000426BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40BCBB0298487D8000426BD /* ContentView.swift */; };
 		A40BCBB3298487D9000426BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40BCBB2298487D9000426BD /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		90CB10FE2984CD9F00D5FD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CB11082984DA8700D5FD90 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		90CB110A2984DEA100D5FD90 /* EditButtonToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonToDo.swift; sourceTree = "<group>"; };
+		90CB110C2984DFA000D5FD90 /* EditButtonDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonDashboard.swift; sourceTree = "<group>"; };
 		A40BCBAB298487D8000426BD /* HoyaHacks-2023-College-Planner-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoyaHacks-2023-College-Planner-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40BCBAE298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoyaHacks_2023_College_Planner_AppApp.swift; sourceTree = "<group>"; };
 		A40BCBB0298487D8000426BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A40BCBCA298489FA000426BD /* DashboardView.swift */,
+				90CB110C2984DFA000D5FD90 /* EditButtonDashboard.swift */,
 			);
 			path = "Dashboard Page";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
 				A40BCBB1298487D8000426BD /* ContentView.swift in Sources */,
 				90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */,
+				90CB110D2984DFA000D5FD90 /* EditButtonDashboard.swift in Sources */,
 				A40BCBBE298488C0000426BD /* SideMenuViewModel.swift in Sources */,
 				A40BCBC0298488FE000426BD /* SideMenuView.swift in Sources */,
 				A40BCBCB298489FA000426BD /* DashboardView.swift in Sources */,
