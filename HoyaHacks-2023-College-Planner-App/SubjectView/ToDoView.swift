@@ -5,6 +5,7 @@
 //  Created by Anay Gandhi on 1/27/23
 //
 
+import OrderedCollections
 import SwiftUI
 
 struct ToDoView_UI: View {
@@ -14,27 +15,54 @@ struct ToDoView_UI: View {
                 .font(.headline).bold()
             Spacer()
         }
+        displayAssignments()
         EditButtonToDo()
-        
     }
 }
 
-////local testing date for the To-Do List
-//public class data {
+//local testing date for the To-Do List
+public class data {
 //    @Published var assignments: Dictionary = [
-//        "Problem Set":  [
-//            "Due Date": "Sun Jan 1, 2023",
-//        ],
+//        "Problem Set":  ["Due Date": "Sun Jan 1, 2023"],
 //
-//        "Titration Set": [
-//            "Due Date": "Mon Jan 2, 2023",
-//        ],
-//        
-//        "DS Project": [
-//            "Due Date": "Tues Jan 3, 2023",
-//        ]
+//        "Titration Set": ["Due Date": "Mon Jan 2, 2023"],
+//
+//        "DS Project": ["Due Date": "Tues Jan 3, 2023"]
 //    ]
-//}
+    
+    @Published var assignments: OrderedDictionary = [
+        "Problem Set": "Sun Jan 1, 2023",
+
+        "Titration Set": "Mon Jan 2, 2023",
+
+        "DS Project": "Tues Jan 3, 2023"
+    ]
+}
+
+struct displayAssignments: View {
+//    let assignments = [
+//        "Problem Set": "Sun Jan 1, 2023",
+//
+//        "Titration Set": "Mon Jan 2, 2023",
+//
+//        "DS Project": "Tues Jan 3, 2023"
+//    ]
+
+    var body: some View {
+        let keys = data().assignments.map {$0.key}
+        let values = data().assignments.map {$0.value}
+
+        return List {
+            ForEach(keys.indices) {index in
+                HStack {
+                    Text(keys[index])
+                        
+                    Text("\(values[index])")
+                }
+            }
+        }
+    }
+}
 
 struct EditButtonToDo: View {
     @State private var ShowTextField = false
@@ -81,5 +109,6 @@ struct EditButtonToDo: View {
 struct ToDoView_UI_Previews: PreviewProvider {
     static var previews: some View {
         ToDoView_UI()
+        displayAssignments()
     }
 }
