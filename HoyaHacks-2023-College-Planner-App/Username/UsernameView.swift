@@ -13,7 +13,6 @@ public class username: ObservableObject {
 
 struct UsernameView: View {
     @State private var enteredUser: String = ""
-    @State var hasUser: Bool = (username().user.count != 0)
     
     var body: some View {
             ZStack {
@@ -26,6 +25,20 @@ struct UsernameView: View {
                 VStack (alignment: .center, spacing: 15) {
                     TextField("Enter a username", text: $enteredUser)
                         .multilineTextAlignment(.center)
+                    Button(action: {
+//                        var jsonBody = JSONSerialization.data(withJSONObject: ["username":$enteredUser], options:[])
+//                        let req = HTTPReq(username: enteredUser, body: jsonBody)
+//
+//                        if (req.sendReq("/create-user")) {
+//                            HomeView()
+//                        } else {
+//                            // Error
+//                            }
+                        
+                        }, label: {
+                            Text("Enter")
+                        }
+                    )
                 }
             }
     }

@@ -19,6 +19,23 @@ struct ToDoView_UI: View {
     }
 }
 
+////local testing date for the To-Do List
+//public class data {
+//    @Published var assignments: Dictionary = [
+//        "Problem Set":  [
+//            "Due Date": "Sun Jan 1, 2023",
+//        ],
+//
+//        "Titration Set": [
+//            "Due Date": "Mon Jan 2, 2023",
+//        ],
+//        
+//        "DS Project": [
+//            "Due Date": "Tues Jan 3, 2023",
+//        ]
+//    ]
+//}
+
 struct EditButtonToDo: View {
     @State private var ShowTextField = false
     @State private var enteredAssignment: String = ""

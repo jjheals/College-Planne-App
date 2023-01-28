@@ -16,7 +16,9 @@ struct ContentView: View {
                 if isShowing {
                     SideMenuView(isShowing: $isShowing)
                 }
+    
                 HomeView()
+                
                 //all these attributes are for the animation
                     .cornerRadius(isShowing ? 20 : 10)
                     .offset(x: isShowing ? 300 : 0, y: isShowing ? 44 : 0)
@@ -47,8 +49,30 @@ struct HomeView: View {
             if (username().user.count == 0) {
                 UsernameView()
             } else {
-                Text("Hello World")
+                Text("Hello, " + username().user + "!")
             }
         }
     }
 }
+
+
+////testing structs for username
+//struct testUserView: View {
+//    var body: some View {
+//        if (username().user.count == 0) {
+//                UsernameView()
+//        }
+//    }
+//}
+//
+//
+//struct HomeView: View {
+//    var body: some View {
+//        ZStack {
+//            Color(.white)
+//            if (username().user.count != 0) {
+//                Text("Hello World")
+//            }
+//        }
+//    }
+//}
