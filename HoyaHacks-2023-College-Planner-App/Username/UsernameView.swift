@@ -28,7 +28,7 @@ struct UsernameView: View {
                     TextField("Enter a username", text: $enteredUser)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(.roundedBorder)
-
+                        .foregroundColor(.black)
 
                     //sets boolean $isFocused to true when keyboard is pulled up
                         .focused($isFocused)
@@ -48,6 +48,7 @@ struct UsernameView: View {
                                 print("Error", error)
                             }
                         })
+                        isFocused = false
                     }, label: {
                         Capsule().overlay (
                         Text("Enter")
