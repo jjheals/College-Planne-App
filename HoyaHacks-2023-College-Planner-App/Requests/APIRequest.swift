@@ -114,6 +114,88 @@ class APIRequest {
             completion(.failure(.encodingProblem))
         }
     }
+    
+    func verifyCode(_ code: String, completion: @escaping (Result<User, APIError>) -> Void) {
+        do {
+            var urlRequest = URLRequest(url: resourceURL)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
+            
+            let content = ["code": code]
+            
+            urlRequest.httpBody = try JSONEncoder().encode(content)
+            
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
+                guard let httpResponse = response as? HTTPURLResponse,
+                      let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                
+                if httpResponse.statusCode != 200 {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                
+                do {
+                    let user = try JSONDecoder().decode(User.self, from: jsonData)
+                    self.thisUser = user
+                    print(user.username)
+                    print(user.status)
+                    completion(.success(user))
+                } catch {
+                    completion(.failure(.decodingProblem))
+                }
+            }
+            dataTask.resume()
+            
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
+    
+    func verifytodo(_ subject: String, assignment: String, dueDate: String, id: String, completion: @escaping (Result<User, APIError>) -> Void) {
+        do {
+            var urlRequest = URLRequest(url: resourceURL)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-type")
+            
+            let content = ["assignment-name": assignment,
+                           "for-subject": subject,
+                           "due-date": dueDate,
+                           "username": id
+                        ]
+            
+            urlRequest.httpBody = try JSONEncoder().encode(content)
+            
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response, _ in
+                guard let httpResponse = response as? HTTPURLResponse,
+                      let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                
+                if httpResponse.statusCode != 200 {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                
+                do {
+                    let user = try JSONDecoder().decode(User.self, from: jsonData)
+                    self.thisUser = user
+                    print(user.username)
+                    print(user.status)
+                    completion(.success(user))
+                } catch {
+                    completion(.failure(.decodingProblem))
+                }
+            }
+            dataTask.resume()
+            
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
 }
 
 

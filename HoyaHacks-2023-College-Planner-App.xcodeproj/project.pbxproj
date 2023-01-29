@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9022BB9D29863FAB00DB8B9C /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 9022BB9C29863FAB00DB8B9C /* iPhoneNumberField */; };
+		9022BBA1298668CF00DB8B9C /* UsernameHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9022BBA0298668CF00DB8B9C /* UsernameHolder.swift */; };
 		9073A0DC2985234D009E560C /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073A0DB2985234D009E560C /* CustomViewModifier.swift */; };
 		9091BA322986091300426DBA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091BA312986091300426DBA /* Profile.swift */; };
 		9091BA35298609F700426DBA /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 9091BA34298609F700426DBA /* Auth0 */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9022BBA0298668CF00DB8B9C /* UsernameHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameHolder.swift; sourceTree = "<group>"; };
 		9073A0DB2985234D009E560C /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
 		9091BA312986091300426DBA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9091BA3629860A8300426DBA /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				9091BA312986091300426DBA /* Profile.swift */,
+				9022BBA0298668CF00DB8B9C /* UsernameHolder.swift */,
 			);
 			path = Auth0;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				A40BCBC22984892C000426BD /* SideMenuOptionView.swift in Sources */,
 				A443FB812985308400AA2267 /* APIRequest.swift in Sources */,
 				A40BCBAF298487D8000426BD /* HoyaHacks_2023_College_Planner_AppApp.swift in Sources */,
+				9022BBA1298668CF00DB8B9C /* UsernameHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

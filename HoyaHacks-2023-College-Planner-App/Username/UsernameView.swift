@@ -17,84 +17,129 @@ struct UsernameView: View {
     @State var number: String = ""
     @State var isEditing: Bool = false
     @FocusState private var isFocused: Bool
+    @State var show: Bool = true
+    @State private var code: String = ""
+    @State private var verified: Bool = false
     
     var body: some View {
         
-      if isAuthenticated {
-          ScrollView {
-              VStack {
-                  
-                  Text("You’re logged in!")
-                      .modifier(TitleStyle())
-                  
-                  UserImage(urlString: userProfile.picture)
-                  
-                  VStack {
-                      Text("Name: \(userProfile.name)")
-                      Text("Email: \(userProfile.email)")
-                      iPhoneNumberField("(000) 000-0000", text: $number, isEditing: $isEditing)
-                          .flagHidden(false)
-                          .flagSelectable(true)
-                          .font(UIFont(size: 30, weight: .light, design: .monospaced))
-                          .maximumDigits(10)
-                          .foregroundColor(Color.pink)
-                          .clearButtonMode(.whileEditing)
-                          .onClear { _ in isEditing.toggle() }
-                          .accentColor(Color.orange)
-                          .padding()
-                          .background(Color.white)
-                          .cornerRadius(10)
-                          .shadow(color: isEditing ? .gray : .white, radius: 10)
-                          .padding()
-                          .focused($isFocused)
-                  }
-                  .padding()
-                  
-                  
-                  Button("Submit") {
-                      var editedEmail = removeEverythingAfterAt(email: userProfile.email)
-                      let postReq = APIRequest(endpoint: "/add-phone")
-                      postReq.verifyPhone(number, id: editedEmail, completion: { result in
-                          switch result {
-                          case .success(let message):
-                              print(message)
-                              print("Success")
-                              isFocused = false
-                              
-                         case .failure(let error):
-                              print(result)
-                              print("Error", error)
-                              isFocused = false
-
-                          }
-                      })
-                  }
-                  .buttonStyle(MyButtonStyle())
-                  
-                  Button("Log out") {
-                      logout()
-                  }
-                  .buttonStyle(MyButtonStyle())
-                  
-              } // VStack
-          }
-      } else {
+        if isAuthenticated {
+                ScrollView {
+                    if show {
+                    VStack {
+                        
+                        Text("You’re logged in!")
+                            .modifier(TitleStyle())
+                        
+                        UserImage(urlString: userProfile.picture)
+                        
+                        VStack {
+                            Group {
+                                Text("Name: \(userProfile.name)")
+                                Text("Email: \(userProfile.email)")
+                                if verified == false {
+                                    iPhoneNumberField("(000) 000-0000", text: $number, isEditing: $isEditing)
+                                        .flagHidden(false)
+                                        .flagSelectable(true)
+                                        .font(UIFont(size: 30, weight: .light, design: .monospaced))
+                                        .maximumDigits(10)
+                                        .foregroundColor(Color.pink)
+                                        .clearButtonMode(.whileEditing)
+                                        .onClear { _ in isEditing.toggle() }
+                                        .accentColor(Color.orange)
+                                        .padding()
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+                                        .shadow(color: isEditing ? .gray : .white, radius: 10)
+                                        .padding()
+                                        .focused($isFocused)
+                                }
+                            }
+                                .padding()
+                        }; if verified {
+                            Text("Verified!")
+                                .containerShape(Capsule())
+                        }
+                        
+                        
+                        
+                        Button("Submit") {
+                            var editedEmail = removeEverythingAfterAt(email: userProfile.email)
+                            let postReq = APIRequest(endpoint: "/add-phone")
+                            postReq.verifyPhone(number, id: editedEmail, completion: { result in
+                                switch result {
+                                case .success(let message):
+                                    print(message)
+                                    print("Success")
+                                    isFocused = false
+                                    show = false
+                                    
+                                case .failure(let error):
+                                    print(result)
+                                    print("Error", error)
+                                    isFocused = false
+                                    
+                                }
+                            })
+                        } .buttonStyle(MyButtonStyle())
+                        
+                    }
+                } // show
+                    else if show == false {
+                        VStack (alignment: .center) {
+                            Spacer()
+                            TextField("Enter code", text: $code)
+                                .padding()
+                            Button("Verify") {
+                                let postReq = APIRequest(endpoint: "/verify-phone")
+                                postReq.verifyCode(code, completion: { result in
+                                    switch result {
+                                    case .success(let message):
+                                        print(message)
+                                        print("Success")
+                                        isFocused = false
+                                        verified = true
+                                        
+                                    case .failure(let error):
+                                        print(result)
+                                        print("Error", error)
+                                        isFocused = false
+                                        verified = false
+                                        
+                                    }
+                                })
+                            }
+                            .buttonStyle(MyButtonStyle())
+                            Spacer()
+                        }
+                    }
+                    
+                    Button("Log out") {
+                        logout()
+                    }
+                    .buttonStyle(MyButtonStyle())
+                    
+                
+            } // scroll view
+        } // is authenticated
         
-        VStack {
-          
-          Text("SwiftUI Login demo")
-            .modifier(TitleStyle())
-          
-          Button("Log in") {
-            login()
-          }
-          .buttonStyle(MyButtonStyle())
-          
-        } // VStack
+         else {
+            
+            VStack {
+                
+                Text("SwiftUI Login demo")
+                    .modifier(TitleStyle())
+                
+                Button("Log in") {
+                    login()
+                }
+                .buttonStyle(MyButtonStyle())
+                
+            } // VStack
+            
+        } //else
         
-      } // if isAuthenticated
-      
-    } // body
+    }//body
     
     func removeEverythingAfterAt(email: String) -> String {
         let components = email.split(separator: "@")
@@ -163,6 +208,7 @@ extension UsernameView {
               self.userProfile = Profile.from(credentials.idToken)
               print("Credentials: \(credentials)")
               print("ID token: \(credentials.idToken)")
+              userHolder = removeEverythingAfterAt(email: userProfile.email)
           }
         }
     }

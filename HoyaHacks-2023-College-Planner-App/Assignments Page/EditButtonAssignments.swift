@@ -12,6 +12,8 @@ struct EditButtonAssignments: View {
     @State private var enteredSubject: String = ""
     @State private var enteredAssignment: String = ""
     @State private var enteredDueDate: String = ""
+    @FocusState private var isFocused: Bool
+
     
     var body: some View {
         if ShowTextField {
@@ -20,15 +22,31 @@ struct EditButtonAssignments: View {
                     TextField("Enter Subject", text: $enteredSubject)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(.roundedBorder)
+                        .focused($isFocused)
                     TextField("Enter Assignment", text: $enteredAssignment)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(.roundedBorder)
+                        .focused($isFocused)
                     TextField("Enter Due Date", text: $enteredDueDate)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(.roundedBorder)
+                        .focused($isFocused)
                     Button(action: {
-                        
-            // space for json request
+                        let postReq = APIRequest(endpoint: "/add-assignment")
+                        postReq.verifytodo(enteredSubject, assignment: enteredAssignment, dueDate: enteredDueDate, id: userHolder, completion: { result in
+                            switch result {
+                            case .success(let message):
+                                print(message)
+                                print("Success")
+                                isFocused = false
+                                
+                            case .failure(let error):
+                                print(result)
+                                print("Error", error)
+                                isFocused = false
+                                
+                            }
+                        })
                         
                         }, label: {
                             Capsule().overlay (
