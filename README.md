@@ -2,7 +2,7 @@
 
 Authors: 
 
-jjheals (Justin Healey) - justinhealey.com, github.com/jjheals \n
+jjheals (Justin Healey) - justinhealey.com, github.com/jjheals and 
 anaygandhi (Anay Gandhi) - github.com/anaygandhi
 
 Inspiration: 
