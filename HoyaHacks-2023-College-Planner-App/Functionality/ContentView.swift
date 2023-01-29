@@ -47,25 +47,3 @@ struct HomeView: View {
         UsernameView()
     }
 }
-
-
-////testing structs for username
-//struct testUserView: View {
-//    var body: some View {
-//        if (username().user.count == 0) {
-//                UsernameView()
-//        }
-//    }
-//}
-//
-//
-//struct HomeView: View {
-//    var body: some View {
-//        ZStack {
-//            Color(.white)
-//            if (username().user.count != 0) {
-//                Text("Hello World")
-//            }
-//        }
-//    }
-//}

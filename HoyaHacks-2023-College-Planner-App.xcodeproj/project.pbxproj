@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9022BB9D29863FAB00DB8B9C /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 9022BB9C29863FAB00DB8B9C /* iPhoneNumberField */; };
 		9073A0DC2985234D009E560C /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073A0DB2985234D009E560C /* CustomViewModifier.swift */; };
 		9091BA322986091300426DBA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091BA312986091300426DBA /* Profile.swift */; };
 		9091BA35298609F700426DBA /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 9091BA34298609F700426DBA /* Auth0 */; };
@@ -63,6 +64,7 @@
 			files = (
 				90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */,
 				9091BA35298609F700426DBA /* Auth0 in Frameworks */,
+				9022BB9D29863FAB00DB8B9C /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +214,7 @@
 			packageProductDependencies = (
 				90CB11002984D16C00D5FD90 /* OrderedCollections */,
 				9091BA34298609F700426DBA /* Auth0 */,
+				9022BB9C29863FAB00DB8B9C /* iPhoneNumberField */,
 			);
 			productName = "HoyaHacks-2023-College-Planner-App";
 			productReference = A40BCBAB298487D8000426BD /* HoyaHacks-2023-College-Planner-App.app */;
@@ -244,6 +247,7 @@
 			packageReferences = (
 				90CB10FF2984D16C00D5FD90 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				9091BA33298609F700426DBA /* XCRemoteSwiftPackageReference "Auth0" */,
+				9022BB9B29863FAB00DB8B9C /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
 			);
 			productRefGroup = A40BCBAC298487D8000426BD /* Products */;
 			projectDirPath = "";
@@ -495,6 +499,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9022BB9B29863FAB00DB8B9C /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		9091BA33298609F700426DBA /* XCRemoteSwiftPackageReference "Auth0" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/Auth0.swift";
@@ -514,6 +526,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9022BB9C29863FAB00DB8B9C /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9022BB9B29863FAB00DB8B9C /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
 		9091BA34298609F700426DBA /* Auth0 */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9091BA33298609F700426DBA /* XCRemoteSwiftPackageReference "Auth0" */;

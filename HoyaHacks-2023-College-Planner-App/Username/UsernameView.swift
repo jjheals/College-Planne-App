@@ -8,55 +8,77 @@
 import SwiftUI
 import Auth0
 import JWTDecode
-import SimpleKeychain
+import iPhoneNumberField
 
 struct UsernameView: View {
     
     @State private var isAuthenticated = false
     @State var userProfile = Profile.empty
+    @State var number: String = ""
+    @State var isEditing: Bool = false
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         
       if isAuthenticated {
-        
-        // “Logged in” screen
-        // ------------------
-        // When the user is logged in, they should see:
-        //
-        // - The title text “You’re logged in!”
-        // - Their photo
-        // - Their name
-        // - Their email address
-        // - The "Log out” button
-        
-        VStack {
-          
-          Text("You’re logged in!")
-            .modifier(TitleStyle())
-    
-          UserImage(urlString: userProfile.picture)
-          
-          VStack {
-            Text("Name: \(userProfile.name)")
-            Text("Email: \(userProfile.email)")
+          ScrollView {
+              VStack {
+                  
+                  Text("You’re logged in!")
+                      .modifier(TitleStyle())
+                  
+                  UserImage(urlString: userProfile.picture)
+                  
+                  VStack {
+                      Text("Name: \(userProfile.name)")
+                      Text("Email: \(userProfile.email)")
+                      iPhoneNumberField("(000) 000-0000", text: $number, isEditing: $isEditing)
+                          .flagHidden(false)
+                          .flagSelectable(true)
+                          .font(UIFont(size: 30, weight: .light, design: .monospaced))
+                          .maximumDigits(10)
+                          .foregroundColor(Color.pink)
+                          .clearButtonMode(.whileEditing)
+                          .onClear { _ in isEditing.toggle() }
+                          .accentColor(Color.orange)
+                          .padding()
+                          .background(Color.white)
+                          .cornerRadius(10)
+                          .shadow(color: isEditing ? .gray : .white, radius: 10)
+                          .padding()
+                          .focused($isFocused)
+                  }
+                  .padding()
+                  
+                  
+                  Button("Submit") {
+                      var editedEmail = removeEverythingAfterAt(email: userProfile.email)
+                      let postReq = APIRequest(endpoint: "/add-phone")
+                      postReq.verifyPhone(number, id: editedEmail, completion: { result in
+                          switch result {
+                          case .success(let message):
+                              print(message)
+                              print("Success")
+                              isFocused = false
+                              
+                         case .failure(let error):
+                              print(result)
+                              print("Error", error)
+                              isFocused = false
+
+                          }
+                      })
+                  }
+                  .buttonStyle(MyButtonStyle())
+                  
+                  Button("Log out") {
+                      logout()
+                  }
+                  .buttonStyle(MyButtonStyle())
+                  
+              } // VStack
           }
-          .padding()
-          
-          Button("Log out") {
-            logout()
-          }
-          .buttonStyle(MyButtonStyle())
-          
-        } // VStack
-      
       } else {
-        
-        // “Logged out” screen
-        // ------------------
-        // When the user is logged out, they should see:
-        //
-        // - The title text “SwiftUI Login Demo”
-        // - The ”Log in” button
         
         VStack {
           
@@ -74,16 +96,13 @@ struct UsernameView: View {
       
     } // body
     
-    
-    // MARK: Custom views
-    // ------------------
+    func removeEverythingAfterAt(email: String) -> String {
+        let components = email.split(separator: "@")
+        return String(components[0])
+    }
     
     struct UserImage: View {
-      // Given the URL of the user’s picture, this view asynchronously
-      // loads that picture and displays it. It displays a “person”
-      // placeholder image while downloading the picture or if
-      // the picture has failed to download.
-      
+
       var urlString: String
       
       var body: some View {
@@ -101,10 +120,6 @@ struct UsernameView: View {
         .padding(40)
       }
     }
-    
-    
-    // MARK: View modifiers
-    // --------------------
     
     struct TitleStyle: ViewModifier {
       let titleFontBold = Font.title.weight(.bold)
@@ -168,87 +183,10 @@ extension UsernameView {
     }
 }
 
-
-//
-//    @State private var enteredUser: String = ""
-//    //var to dictate whether the keyboard is brought up or not
-//    @FocusState private var isFocused: Bool
-//    @State private var isButtonVisible = true
-//
-////    var testUsername: String = " "
-//
-////    init(testUsername1: String) {
-////        self.testUsername = testUsername1
-////        print(testUsername1 + " <-----")
-////    }
-////
-////    init() {}
-//
-//    var body: some View {
-//        if isButtonVisible {
-//            ZStack {
-//                VStack (alignment: .center, spacing: 15) {
-//                    TextField("Enter a username", text: $enteredUser)
-//                        .multilineTextAlignment(.center)
-//                        .textFieldStyle(.roundedBorder)
-//                        .foregroundColor(.black)
-//
-//                    //sets boolean $isFocused to true when keyboard is pulled up
-//                        .focused($isFocused)
-//
-//
-//                        Button(action: {
-//                            print("ENTERED USERNAME: \(enteredUser)")
-//                            // Create new network
-//                            let postReq = APIRequest(endpoint: "/verify")
-//                            postReq.verifyUser(enteredUser, completion: { result in
-//                                switch result {
-//                                case .success(let message):
-//                                    print(message)
-//                                    print("Success")
-//                                    self.isButtonVisible = false
-//                                    newView(name: enteredUser)
-////                                    UsernameView(testUsername1: enteredUser)
-//                                case .failure(let error):
-//                                    print(result)
-//                                    print("Error", error)
-//                                    UsernameView()
-//                                }
-//                            })
-//                            isFocused = false
-//                        }, label: {
-//                            Capsule().overlay (
-//                                Text("Enter")
-//                                    .foregroundColor(.black)
-//                                    .padding()
-//                            ).frame (width: 100, height: 40)
-//                        }
-//                        )
-//                    }
-//                }.modifier(CustomViewModifier(roundedCornes: 6, startColor: .blue, endColor: .purple, textColor: .white))
-//        }
-
-
 struct UsernameView_Previews: PreviewProvider {
     static var previews: some View {
-//        UsernameView(testUsername1: "")
         UsernameView()
     }
 }
-
-//struct newView: View {
-//
-//    var name: String
-//
-//    init(name: String) {
-//        self.name = name
-//    }
-//
-//    var body: some View {
-//        VStack{
-//            Text("Hello, \(self.name)")
-//        }
-//    }
-//}
 
 

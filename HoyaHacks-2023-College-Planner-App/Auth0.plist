@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Auth0.plist
-   HoyaHacks-2023-College-Planner-App
-
-   Created by Anay Gandhi on 1/28/23.
-   Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
--->
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>Domain</key>
+	<string>dev-5peb6fk3nksyqr76.us.auth0.com</string>
+	<key>ClientId</key>
+	<string>AYr4BGL2GAnFbQoj3Bkdeuc5IFau7qnu</string>
+</dict>
 </plist>
