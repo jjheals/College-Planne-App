@@ -9,24 +9,20 @@ import pickle
 from os import chdir, getcwd
 from os.path import isdir, isfile
 
-#from data.classes.Assignment import Assignment 
-from data.classes.Exam import Exam
 from data.classes.Subject import Subject
 import data.classes.Assignment as a
-import functions
+import functions as func
 
 class User: 
     
     username: str
-    assignments: dict[str:str] 
-    subjects: list[Subject]
-    exams: list [Exam]
+    assignments: list[a.Assignment] = [] 
+    subjects: list[Subject] = []
     
     def __init__(self, username: str):
         self.username = username
         self.assignments = []
         self.subjects = []
-        self.exams = []
         
     # Save this user 
     def save(self, newUser: bool = False):
@@ -40,17 +36,13 @@ class User:
         except Exception as e: 
             print("Error saving user.", e)
       
-      
     # Add a new assignment to this user  
     # Returns 0 on success, 1 on failure
     def addAssignment(self, newAssignment: a.Assignment):
-        self.assignments = self.assignments.append(newAssignment)
-        return self.save()
-    
-    # Adds a new exam to this user 
-    # Returns 0 on success, 1 on failure
-    def addExam(self, newExam: Exam):
-        self.exams = self.exams.append(newExam)
+        print("INFO")
+        print(self.assignments)
+        print(newAssignment.assignmentName)
+        self.assignments.append(newAssignment)
         return self.save()
     
     # Adds a new subject to this user 
@@ -61,7 +53,8 @@ class User:
             
     # Get all this user's assignments, sorted by due date
     def userSortAssignments(self):
-        return functions.sortAssignments(self.assignments)
-        
-            
+        tmpAssignment = a.Assignment("","","01/01/2000")
+        sortedAssignments = tmpAssignment.sortAssignments(self.assignments)
+        return sortedAssignments
+   
             
