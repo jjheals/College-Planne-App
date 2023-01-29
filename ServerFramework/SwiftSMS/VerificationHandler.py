@@ -64,6 +64,6 @@ class VerificationHandler:
 
         message = self.client.messages.create(
             body = msgBody,
-            from_ = '+18444361861',
+            from_ = '',
             to = self.phoneNumber)
 
