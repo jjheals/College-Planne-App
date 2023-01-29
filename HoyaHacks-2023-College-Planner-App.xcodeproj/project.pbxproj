@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9073A0DC2985234D009E560C /* CustomViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073A0DB2985234D009E560C /* CustomViewModifier.swift */; };
+		9091BA322986091300426DBA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091BA312986091300426DBA /* Profile.swift */; };
+		9091BA35298609F700426DBA /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 9091BA34298609F700426DBA /* Auth0 */; };
+		9091BA3729860A8300426DBA /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9091BA3629860A8300426DBA /* Auth0.plist */; };
 		90C4F6A329849178002C49BD /* UsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4F6A229849178002C49BD /* UsernameView.swift */; };
 		90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 90CB11002984D16C00D5FD90 /* OrderedCollections */; };
 		90CB11092984DA8700D5FD90 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB11082984DA8700D5FD90 /* CheckboxView.swift */; };
@@ -30,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		9073A0DB2985234D009E560C /* CustomViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewModifier.swift; sourceTree = "<group>"; };
+		9091BA312986091300426DBA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		9091BA3629860A8300426DBA /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		90C4F6A229849178002C49BD /* UsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameView.swift; sourceTree = "<group>"; };
 		90CB10FE2984CD9F00D5FD90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CB11082984DA8700D5FD90 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
@@ -57,12 +62,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				90CB11012984D16C00D5FD90 /* OrderedCollections in Frameworks */,
+				9091BA35298609F700426DBA /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9091BA30298608F700426DBA /* Auth0 */ = {
+			isa = PBXGroup;
+			children = (
+				9091BA312986091300426DBA /* Profile.swift */,
+			);
+			path = Auth0;
+			sourceTree = "<group>";
+		};
 		90C4F6A129849139002C49BD /* Username */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +158,9 @@
 		A40BCBAD298487D8000426BD /* HoyaHacks-2023-College-Planner-App */ = {
 			isa = PBXGroup;
 			children = (
+				9091BA3629860A8300426DBA /* Auth0.plist */,
 				90CB10FE2984CD9F00D5FD90 /* Info.plist */,
+				9091BA30298608F700426DBA /* Auth0 */,
 				90CB11062984D9B900D5FD90 /* Functionality */,
 				90CB11032984D94400D5FD90 /* Requests */,
 				90C4F6A129849139002C49BD /* Username */,
@@ -195,6 +211,7 @@
 			name = "HoyaHacks-2023-College-Planner-App";
 			packageProductDependencies = (
 				90CB11002984D16C00D5FD90 /* OrderedCollections */,
+				9091BA34298609F700426DBA /* Auth0 */,
 			);
 			productName = "HoyaHacks-2023-College-Planner-App";
 			productReference = A40BCBAB298487D8000426BD /* HoyaHacks-2023-College-Planner-App.app */;
@@ -226,6 +243,7 @@
 			mainGroup = A40BCBA2298487D8000426BD;
 			packageReferences = (
 				90CB10FF2984D16C00D5FD90 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				9091BA33298609F700426DBA /* XCRemoteSwiftPackageReference "Auth0" */,
 			);
 			productRefGroup = A40BCBAC298487D8000426BD /* Products */;
 			projectDirPath = "";
@@ -242,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40BCBB6298487D9000426BD /* Preview Assets.xcassets in Resources */,
+				9091BA3729860A8300426DBA /* Auth0.plist in Resources */,
 				A40BCBB3298487D9000426BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9091BA322986091300426DBA /* Profile.swift in Sources */,
 				9073A0DC2985234D009E560C /* CustomViewModifier.swift in Sources */,
 				90C4F6A329849178002C49BD /* UsernameView.swift in Sources */,
 				A40BCBCD29848A0C000426BD /* CalendarView.swift in Sources */,
@@ -413,7 +433,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
+				PRODUCT_BUNDLE_IDENTIFIER = "HoyaHacks2023.HoyaHacks-2023-College-Planner-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,7 +463,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Hoya-Hacks2023.HoyaHacks-2023-College-Planner-App-1-";
+				PRODUCT_BUNDLE_IDENTIFIER = "HoyaHacks2023.HoyaHacks-2023-College-Planner-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -475,6 +495,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9091BA33298609F700426DBA /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
 		90CB10FF2984D16C00D5FD90 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-collections.git";
@@ -486,6 +514,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9091BA34298609F700426DBA /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9091BA33298609F700426DBA /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
 		90CB11002984D16C00D5FD90 /* OrderedCollections */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 90CB10FF2984D16C00D5FD90 /* XCRemoteSwiftPackageReference "swift-collections" */;

@@ -44,14 +44,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct HomeView: View {
     var body: some View {
-        ZStack {
-            Color(.white)
-            if (username().user.count == 0) {
-                UsernameView()
-            } else {
-                Text("Hello, " + username().user + "!")
-            }
-        }
+        UsernameView()
     }
 }
 
