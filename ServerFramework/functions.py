@@ -1,4 +1,8 @@
-# Contains all the extra functions for the main flask framework and handling requests
+# functions.py 
+#
+# Contains some of the extra functions for the main flask framework and handling requests
+# 
+
 from datetime import datetime
 import data.classes.Assignment as assn
 
